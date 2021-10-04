@@ -19,7 +19,7 @@ Check who are in the server with FormAPI, for PocketMine-MP. If you are have a q
 
 # Installation
 1. Download the [plugin](https://github.com/Kylan1940/OnlineUI/releases/download/OnlineUI/OnlineUI_v1.1.9.phar)
-2. Put plugin and depend plugin to **plugins** file
+2. Put plugin to **plugins** file
 3. Restart the server
 
 # Permission
