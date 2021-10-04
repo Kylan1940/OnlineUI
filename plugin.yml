@@ -1,0 +1,10 @@
+name: OnlineUI
+version: 1.1.9
+main: Kylan1940\OnlineUI\Main
+api: 3.0.0
+author: Kylan1940
+
+commands:
+  online:
+    description: Check who are in the server 
+    usage: /online

@@ -1,0 +1,11 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Kylan1940/OnlineUI
+build-by-default: true
+branches:
+- main
+projects:
+  OnlineUI:
+    path: ""
+    libs:
+    - src: jojoe77777/FormAPI/libFormApi 
+      version: ^1.3
+...
