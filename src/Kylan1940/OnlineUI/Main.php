@@ -38,19 +38,20 @@ class Main extends PluginBase implements Listener{
 	}
 	
 	public function online($sender){
-		$form = new SimpleForm(function (Player $sender, int $data = null){
-       $result = $data;
-       if ($result === null) {
-           return true;
-       }
-			$this->targetPlayer[$sender->getName()] = $target;
-		});
-		$form->setTitle($this->getConfig()->get("title"));
-		$form->setContent($this->getConfig()->get("content"));
-		foreach($this->getServer()->getOnlinePlayers() as $online){
+    $form = new SimpleForm(function (Player $sender, $data){
+        if($data === null){
+            return true;
+        }
+        $target = $data;
+        $this->targetPlayer[$sender->getName()] = $target;
+    });
+    $form->setTitle($this->getConfig()->get("title"));
+    $form->setContent($this->getConfig()->get("content"));
+    foreach($this->getServer()->getOnlinePlayers() as $online){
         $form->addButton($online->getName(), -1, "", $online->getName());
     }
-		$form->sendToPlayer($sender);
-		return $form;
-	}
+    $form->sendToPlayer($sender);
+    return $form;
+}
+
 }
