@@ -5,4 +5,5 @@ branches:
 projects:
   OnlineUI:
     path: ""
+    icon: icon.png
 ...
