@@ -12,6 +12,8 @@ use Kylan1940\OnlineUI\Form\{Form, SimpleForm};
 
 class Main extends PluginBase implements Listener{
 	
+	private $targetPlayer = [];
+	
 	public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
@@ -46,8 +48,8 @@ class Main extends PluginBase implements Listener{
 		$form->setTitle($this->getConfig()->get("title"));
 		$form->setContent($this->getConfig()->get("content"));
 		foreach($this->getServer()->getOnlinePlayers() as $online){
-			$form->addButton($online->getName(), -1, "", $online->getName(), 0, "textures/ui/confirm");
-		}
+        $form->addButton($online->getName(), -1, "", $online->getName());
+    }
 		$form->sendToPlayer($sender);
 		return $form;
 	}
