@@ -1,10 +1,15 @@
 name: OnlineUI
-version: 1.1.9
+version: 2.0.0
 main: Kylan1940\OnlineUI\Main
-api: 3.0.0
+api: 4.0.0
 author: Kylan1940
 
 commands:
   online:
-    description: Check who are in the server 
-    usage: /online
+    description: "Check online players with UI"
+    permission: "onlineui.command"
+    
+permissions:
+  onlineui.command:
+    description: "Permission for OnlineUI command"
+    default: yes

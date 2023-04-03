@@ -5,7 +5,4 @@ branches:
 projects:
   OnlineUI:
     path: ""
-    libs:
-    - src: jojoe77777/FormAPI/libFormApi 
-      version: ^1.3
 ...

@@ -1,5 +1,15 @@
-# ONLINEUI CONFIGURATION
+# HEAL AND FEED CONFIGURATION
 #
+# HELP:
+# \n for new line
+# § for color and special symbols
+
+# DON'T CHANGE THIS!!!
+config-version: "2"
+
+# Command:
+only-ingame: "This command is only in game!"
+
 # UI
 title: "§aOnline§7UI"
-content: "Players :"
+content: "Players Online: "
