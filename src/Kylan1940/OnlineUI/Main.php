@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener{
         $this->getResource("config.yml");
         
         // Check config
-        if($this->getConfig()->get("config-ver") != 2)
+        if($this->getConfig()->get("config-ver") != "2")
         {
             $this->getLogger()->info("OnlineUI's config is NOT up to date. Please delete the config.yml and restart the server or the plugin may not work properly.");
         }
