@@ -12,7 +12,6 @@ use Kylan1940\OnlineUI\Form\{Form, SimpleForm};
 
 class Main extends PluginBase implements Listener{
 	
-	private $targetPlayer = [];
 	const CONFIG_VERSION = 2;
 	
 	public function onEnable() : void {
