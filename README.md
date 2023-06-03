@@ -22,7 +22,7 @@ Check who are in the server with UI, for PocketMine-MP. If you are have a questi
 | 1.0.0 | [Download](https://github.com/Kylan1940/OnlineUI/releases/download/1.0.0/OnlineUI_v1.0.0.phar) | 3.x.x |
 
 # Installation
-1. Download the [plugin](https://github.com/Kylan1940/OnlineUI/releases/download/OnlineUI/OnlineUI_v3. 0.0.phar)
+1. Download the [plugin](https://github.com/Kylan1940/OnlineUI/releases/download/OnlineUI/OnlineUI_v3.0.0.phar)
 3. Put plugin to **plugins** file
 4. Restart the server
 
