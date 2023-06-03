@@ -50,8 +50,6 @@ class Main extends PluginBase implements Listener{
         if($data === null){
             return true;
         }
-        $target = $data;
-        $this->targetPlayer[$sender->getName()] = $target;
     });
     $form->setTitle($this->getConfig()->get("title"));
     $form->setContent($this->getConfig()->get("content"));
