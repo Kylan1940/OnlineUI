@@ -10,7 +10,7 @@ use pocketmine\player\Player;
 abstract class Form implements IForm{
 
     /** @var array */
-    protected $data = [];
+    protected array $data = [];
     /** @var callable|null */
     private $callable;
 
@@ -25,10 +25,10 @@ abstract class Form implements IForm{
      * @deprecated
      * @see Player::sendForm()
      *
-     * @param Player $player
+     * @param Player $sender
      */
-    public function sendToPlayer(Player $player) : void {
-        $player->sendForm($this);
+    public function sendToPlayer(Player $sender) : void {
+        $sender->sendForm($this);
     }
 
     public function getCallable() : ?callable {
@@ -39,18 +39,18 @@ abstract class Form implements IForm{
         $this->callable = $callable;
     }
 
-    public function handleResponse(Player $player, $data) : void {
+    public function handleResponse(Player $sender, $data) : void {
         $this->processData($data);
         $callable = $this->getCallable();
         if($callable !== null) {
-            $callable($player, $data);
+            $callable($sender, $data);
         }
     }
 
-    public function processData(&$data) : void {
+    public function processData(mixed &$data) : void {
     }
 
-    public function jsonSerialize(){
+    public function jsonSerialize():mixed{
         return $this->data;
     }
 }

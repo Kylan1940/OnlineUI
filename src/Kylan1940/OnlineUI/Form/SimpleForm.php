@@ -25,10 +25,10 @@ class SimpleForm extends Form {
         $this->data["buttons"] = [];
     }
 
-    public function processData(&$data) : void {
-        $data = $this->labelMap[$data] ?? null;
+    public function processData(mixed &$data): void {
+        $data = $this->labelMap[$data] ?? null; 
     }
-
+ 
     /**
      * @param string $title
      */

@@ -13,16 +13,25 @@ use Kylan1940\OnlineUI\Form\{Form, SimpleForm};
 class Main extends PluginBase implements Listener{
 	
 	private $targetPlayer = [];
+	const CONFIG_VERSION = 2;
 	
 	public function onEnable() : void {
+	      $this->updateConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
         $this->getResource("config.yml");
-        
-        // Check config
-        if($this->getConfig()->get("config-ver") != "2")
-        {
-            $this->getLogger()->info("OnlineUI's config is NOT up to date. Please delete the config.yml and restart the server or the plugin may not work properly.");
+  }
+  
+  private function updateConfig(){
+        if (!file_exists($this->getDataFolder() . 'config.yml')) {
+            $this->saveResource('config.yml');
+            return;
+        }
+        if ($this->getConfig()->get('config-version') !== self::CONFIG_VERSION) {
+            $config_version = $this->getConfig()->get('config-version');
+            $this->getLogger()->info("Your Config isn't the latest. We renamed your old config to §bconfig-" . $config_version . ".yml §6and created a new config");
+            rename($this->getDataFolder() . 'config.yml', $this->getDataFolder() . 'config-' . $config_version . '.yml');
+            $this->saveResource('config.yml');
         }
   }
 	
