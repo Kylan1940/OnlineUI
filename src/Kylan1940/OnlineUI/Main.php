@@ -59,8 +59,8 @@ class Main extends PluginBase implements Listener{
             return true;
         }
     });
-    $form->setTitle($prefix.$this->getConfig()->getNested('ui.title'));
-    $form->setContent($prefix.$this->getConfig()->getNested('ui.content'));
+    $form->setTitle($this->getConfig()->getNested('ui.title'));
+    $form->setContent($this->getConfig()->getNested('ui.content'));
     foreach($this->getServer()->getOnlinePlayers() as $online){
         $form->addButton($online->getName(), -1, "", $online->getName());
     }
