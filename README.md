@@ -4,8 +4,10 @@
 # Description
 Check who are in the server with UI, for PocketMine-MP. If you are have a question, please make a [issues](https://github.com/Kylan1940/OnlineUI/issues/new)
 
-# Changelogs [3.0.0]
->- Support PM5
+# Changelogs [3.1.0]
+>- Custom OnlyInGame command
+>- Added prefix
+>- Changed icon
 
 # Features
 >- With UI

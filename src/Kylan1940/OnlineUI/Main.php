@@ -12,7 +12,8 @@ use Kylan1940\OnlineUI\Form\{Form, SimpleForm};
 
 class Main extends PluginBase implements Listener{
 	
-	const CONFIG_VERSION = 2;
+	const CONFIG_VERSION = 3;
+	const PREFIX = "prefix";
 	
 	public function onEnable() : void {
 	      $this->updateConfig();
@@ -35,12 +36,19 @@ class Main extends PluginBase implements Listener{
   }
 	
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
+	  $prefix = $this->getConfig()->get(self::PREFIX);
 	  if ($sender instanceof Player) {
 	    if($cmd->getName() == "online"){
 	      $this->online($sender);
 	  }
 	    } else {
-	      $sender->sendMessage($this->getConfig()->get("only-ingame"));
+	      if($this->getConfig()->getNested('console-execute') == "message"){
+	        $sender->sendMessage($prefix.$this->getConfig()->getNested('console.message'));
+	      }
+	      elseif($this->getConfig()->getNested('console-execute') == "command"){
+	        $command = $this->getConfig()->getNested('console.command');
+          $this->getServer()->dispatchCommand($sender, $command);
+	      }
 	    }
 		return true;
 	}
@@ -51,8 +59,8 @@ class Main extends PluginBase implements Listener{
             return true;
         }
     });
-    $form->setTitle($this->getConfig()->get("title"));
-    $form->setContent($this->getConfig()->get("content"));
+    $form->setTitle($prefix.$this->getConfig()->getNested('ui.title'));
+    $form->setContent($prefix.$this->getConfig()->getNested('ui.content'));
     foreach($this->getServer()->getOnlinePlayers() as $online){
         $form->addButton($online->getName(), -1, "", $online->getName());
     }

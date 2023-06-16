@@ -12,19 +12,30 @@
 # Website: https://web.kylan1940.online
 # ===========================================================================
 
-# ONLINEUI CONFIGURATION
+# CONFIGURATION
 #
 # HELP:
 # \n for new line
 # § for color and special symbols
 
 # Config Version
-# DON'T CHANGE THIS!!! 
-config-version: "2" 
+# DO NOT CHANGE THIS!!!
+config-version: 3
 
-# Command:
-only-ingame: "This command is only in game!"
+# Prefix
+prefix: "§7[§eOnlineUI§7] "
+
+# Console Command
+# message = execute message
+# command = execute command
+console-execute: "command"
+console:
+  # used if you select message
+  message: "§cThis command can only be used in-game!"
+  # used if you select command (DO NOT USE '/', e.g., "list")
+  command: "list"
 
 # UI
-title: "§aOnline§7UI"
-content: "Players Online: "
+ui:
+  title: "§aOnline§7UI"
+  content: "Players Online: "
