@@ -16,12 +16,13 @@ Check who are in the server with UI, for PocketMine-MP. If you are have a questi
 >- Xbox profile display (maybe soon)
 
 # Download
-| Version | Phar | Support |
-|---|---|---|
-| 3.0.0 | [Download](https://github.com/Kylan1940/OnlineUI/releases/download/3.0.0/OnlineUI_v3.0.0.phar) | 5.x.x |
-| 2.0.0 | [Download](https://github.com/Kylan1940/OnlineUI/releases/download/2.0.0/OnlineUI_v2.0.0.phar) | 4.x.x |
-| 1.1.9 | [Download](https://github.com/Kylan1940/OnlineUI/releases/download/1.1.9/OnlineUI_v1.1.9.phar) | 3.x.x |
-| 1.0.0 | [Download](https://github.com/Kylan1940/OnlineUI/releases/download/1.0.0/OnlineUI_v1.0.0.phar) | 3.x.x |
+| Version | PHAR | ZIP | Support |
+|---|---|---|---|
+| 3.1.0 | [Download](https://poggit.pmmp.io/p/OnlineUI/3.1.0) | [Download](https://github.com/Kylan1940/OnlineUI/archive/refs/tags/3.1.0.zip) | 5.x.x |
+| 3.0.0 | [Download](https://poggit.pmmp.io/p/OnlineUI/3.0.0) | [Download](https://github.com/Kylan1940/OnlineUI/archive/refs/tags/3.0.0.zip) | 5.x.x |
+| 2.0.0 | [Download](https://poggit.pmmp.io/p/OnlineUI/2.0.0) | [Download](https://github.com/Kylan1940/OnlineUI/archive/refs/tags/2.0.0.zip) | 4.x.x |
+| 1.1.9 | [Download](https://poggit.pmmp.io/p/OnlineUI/1.1.9) | [Download](https://github.com/Kylan1940/OnlineUI/archive/refs/tags/1.1.9.zip) | 3.x.x |
+| 1.0.0 | [Download](https://poggit.pmmp.io/p/OnlineUI/1.0.0) | [Download](https://github.com/Kylan1940/OnlineUI/archive/refs/tags/1.0.0.zip) | 3.x.x |
 
 # Installation
 1. Download the [plugin](https://github.com/Kylan1940/OnlineUI/releases/download/OnlineUI/OnlineUI_v3.0.0.phar)
