@@ -20,7 +20,7 @@
 
 # Config Version
 # DO NOT CHANGE THIS!!!
-config-version: 3
+config-version: 4
 
 # Prefix
 prefix: "§7[§eOnlineUI§7] "
@@ -35,7 +35,17 @@ console:
   # used if you select command (DO NOT USE '/', e.g., "list")
   command: "list"
 
+# No Permission Message
+no-permission: "§cYou don't have §aOnlineUI §cpermission!"
+
 # UI
 ui:
   title: "§aOnline§7UI"
   content: "Players Online: "
+
+# Command
+command:
+  command: "online"
+  description: "Check online player(s) with UI"
+  usage: "/online"
+  aliases: ["onlineui", "lists"]
