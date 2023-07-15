@@ -10,7 +10,6 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\console\ConsoleCommandSender;
 use pocketmine\utils\Config;
-//use pocketmine\event\Listener;
 use Kylan1940\OnlineUI\Main;
 use Kylan1940\OnlineUI\Form\{Form, SimpleForm};
 

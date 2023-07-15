@@ -20,7 +20,7 @@ assignees: ''
 ```Your OnlineUI Version Here```
 
 **Config Version :**
-```Your HealAndFeed Config Version Here``` 
+```Your OnlineUI Config Version Here``` 
 
 **Describe the error :**
 ```Describe The Error Here```
